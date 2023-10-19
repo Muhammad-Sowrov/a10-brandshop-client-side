@@ -94,6 +94,7 @@ const Navbar = () => {
               <p className="text-2xl">
                 Blush<span className="text-2xl text-purple-600">ly</span>
               </p>
+             
             </NavLink>
           </div>
         </div>

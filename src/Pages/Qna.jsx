@@ -1,6 +1,6 @@
 const Qna = () => {
     return (
-        <div>
+        <div className="h-[80vh]">
             
         </div>
     );
