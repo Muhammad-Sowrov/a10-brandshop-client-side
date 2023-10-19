@@ -1,26 +1,32 @@
 [
     {
-    "brand_name": "Dior",
-    "logo": "https://i.ibb.co/sbFdN38/dior.png"
+        "id": 1,
+        "brand_name": "Dior",
+        "logo": "https://i.ibb.co/sbFdN38/dior.png"
     },
     {
-    "brand_name": "Estee Lauder",
-    "logo": "https://i.ibb.co/7zQMvVv/esteelauder.png"
+        "id": 2,
+        "brand_name": "Estee Lauder",
+        "logo": "https://i.ibb.co/7zQMvVv/esteelauder.png"
     },
     {
-    "brand_name": "Revlon",
-    "logo": "https://i.ibb.co/s1CCFg2/revlon.png"
+        "id": 3,
+        "brand_name": "Revlon",
+        "logo": "https://i.ibb.co/s1CCFg2/revlon.png"
     },
     {
-    "brand_name": "Shiseido",
-    "logo": "https://i.ibb.co/P62HVYL/shiseido.png"
+        "id": 4,
+        "brand_name": "Shiseido",
+        "logo": "https://i.ibb.co/P62HVYL/shiseido.png"
     },
     {
-    "brand_name": "Olay",
-    "logo": "https://i.ibb.co/D7jLpS0/olay.png"
+        "id": 5,
+        "brand_name": "Olay",
+        "logo": "https://i.ibb.co/D7jLpS0/olay.png"
     },
     {
-    "brand_name": "Lancome",
-    "logo": "https://i.ibb.co/rkC81BR/lancome.png"
+        "id": 6,
+        "brand_name": "Lancome",
+        "logo": "https://i.ibb.co/rkC81BR/lancome.png"
     }
-    ]
+]
