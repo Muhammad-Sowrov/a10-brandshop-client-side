@@ -26,6 +26,7 @@ const Register = () => {
         })
         .catch((error)=> {
           console.log(error.message);
+          setError(error.message)
         })
       }
     }
@@ -77,8 +78,8 @@ const Register = () => {
                 />
               </div>
 
-              <p className="text-red-400">{error}</p>
-              <p className="text-green-400">{success}</p>
+              <p className="text-red-700">{error}</p>
+              <p className="text-green-800">{success}</p>
               <div className="form-control mt-6">
                 <button onClick={handleRegister} className="btn btn-secondary">Register</button>
               </div>

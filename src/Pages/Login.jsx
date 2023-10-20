@@ -1,6 +1,41 @@
-import { NavLink } from "react-router-dom";
+import { useContext, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../firebase/AuthProvider";
+import { Result } from "postcss";
 
 const Login = () => {
+  const { signIn, signInWithGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [google, setGoogle] = useState("");
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    if(email, password){
+      setError("");
+      signIn(email, password)
+      .then(result => {
+        console.log(result.user);
+        navigate(location.state? location.state : "/")
+      })
+      .catch(error => {
+        console.log(error.message);
+        setError("Invalid Email or Password. Please use a valid Email and Password")
+      })
+    }
+  };
+  const handleGoogle = () => {
+    signInWithGoogle()
+    .then(result => {
+      console.log(result.user);
+    })
+    .catch(error => {
+      console.log(error.message);
+    })
+  }
+
   return (
     <div>
       <div>
@@ -13,6 +48,7 @@ const Login = () => {
                     <span className="label-text">Email</span>
                   </label>
                   <input
+                    onChange={(e) => setEmail(e.target.value)}
                     type="email"
                     name="email"
                     placeholder="email"
@@ -25,6 +61,7 @@ const Login = () => {
                     <span className="label-text">Password</span>
                   </label>
                   <input
+                    onChange={(e) => setPassword(e.target.value)}
                     type="password"
                     name="password"
                     placeholder="password"
@@ -33,15 +70,16 @@ const Login = () => {
                   />
                 </div>
 
-                <p className="text-red-400"></p>
-                <p className="text-green-400"></p>
+                <p className="text-red-700">{error}</p>
+                {/* <p className="text-green-800">{success}</p> */}
                 <div className="form-control mt-6">
-                  <button className="btn btn-secondary">Login</button>
+                  <button onClick={handleSignIn} className="btn btn-secondary">
+                    Login
+                  </button>
                 </div>
                 <p className="text-center">Or</p>
-                {/* <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Responsive</button> */}
                 <div className="form-control">
-                  <button className="btn btn-secondary">
+                  <button onClick={handleGoogle} className="btn btn-secondary">
                     Login With Google
                   </button>
                 </div>
