@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import auth from "./firebase.config";
 import {
   createUserWithEmailAndPassword,
@@ -34,13 +34,26 @@ const AuthProvider = ({ children }) => {
 
 
   const signIn = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
 
   const logOut = () => {
+    setLoading(true);
     return signOut(auth);
   }
+
+  useEffect(()=> {
+    const unSubscribe = onAuthStateChanged(auth, currentUser => {
+        console.log('user been spying');
+        setUser(currentUser);
+        setLoading(false);
+    })
+    return ()=> {
+        unSubscribe();
+    }
+  },[])
   const userInfo = {
     user,
     loading,

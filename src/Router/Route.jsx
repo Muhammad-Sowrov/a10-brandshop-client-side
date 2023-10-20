@@ -7,12 +7,14 @@ import About from "../Pages/About";
 import Qna from "../Pages/Qna";
 import AddProduct from "../Pages/AddProduct";
 import Register from "../Pages/Register";
+import Error from "../Pages/Error";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: "/",
