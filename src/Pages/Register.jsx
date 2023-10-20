@@ -1,6 +1,49 @@
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../firebase/AuthProvider";
 
 const Register = () => {
+
+  const {signUp, signInWithGoogle} = useContext(AuthContext);
+  const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
+
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    if(!/^(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{6,}$/.test(password)){
+      setError("Password is invalid. It should be at least 6 characters long, contain at least one uppercase letter, and have at least one special character");
+    }
+    else{
+      setError("");
+      if(email){
+        signUp(email, password)
+        .then((result) => {
+          console.log(result.user);
+          setSuccess("User Created Successfully")
+        })
+        .catch((error)=> {
+          console.log(error.message);
+        })
+      }
+    }
+
+  } 
+  const handleGoogle = () => {
+    signInWithGoogle()
+    .then((result)=> {
+      console.log(result.user);
+      setSuccess("User Created Successfully")
+    })
+    .catch((error) => {
+      console.log(error.message);
+    })
+  }
+
+
+  // console.log(email, password);
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -12,6 +55,7 @@ const Register = () => {
                   <span className="label-text">Email</span>
                 </label>
                 <input
+                  onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   name="email"
                   placeholder="email"
@@ -24,6 +68,7 @@ const Register = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
+                  onChange={(e) => setPassword(e.target.value)}
                   type="password"
                   name="password"
                   placeholder="password"
@@ -32,14 +77,14 @@ const Register = () => {
                 />
               </div>
 
-              <p className="text-red-400"></p>
-              <p className="text-green-400"></p>
+              <p className="text-red-400">{error}</p>
+              <p className="text-green-400">{success}</p>
               <div className="form-control mt-6">
-                <button className="btn btn-secondary">Register</button>
+                <button onClick={handleRegister} className="btn btn-secondary">Register</button>
               </div>
               <p className="text-center">Or</p>
               <div className="form-control">
-                <button className="btn btn-secondary">
+                <button onClick={handleGoogle} className="btn btn-secondary">
                   Register With Google
                 </button>
               </div>
