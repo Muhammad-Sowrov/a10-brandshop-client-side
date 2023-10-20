@@ -1,6 +1,15 @@
 const AddProduct = () => {
-  const handleAdd = (e) => {
-    e.prevent.Default();
+  const handleAdd = e => {
+    e.preventDefault();
+    const form = e.target;
+    const image = form.img_url.value;
+    const name = form.name.value;
+    const brand_name = form.brand_name.value;
+    const type = form.type.value;
+    const price = form.price.value;
+    const description = form.description.value;
+    const rating = form.rating.value;
+    console.log(image, name, brand_name, type, price, description, rating);
   };
   return (
     <div className="">
@@ -24,7 +33,7 @@ const AddProduct = () => {
             <input
               type="text"
               name="name"
-              placeholder="Your Name"
+              placeholder="Name of Your Product"
               className="input input-bordered w-full max-w-xs"
             />
           </div>
@@ -47,15 +56,17 @@ const AddProduct = () => {
               <select
                 className="select select-bordered"
                 defaultValue="Pick one"
+                name="type"
               >
                 <option disabled value="Pick one">
                   Pick one
                 </option>
-                <option value="Star Wars">Star Wars</option>
-                <option value="Harry Potter">Harry Potter</option>
-                <option value="Lord of the Rings">Lord of the Rings</option>
-                <option value="Planet of the Apes">Planet of the Apes</option>
-                <option value="Star Trek">Star Trek</option>
+                <option value="Perfume">Perfume</option>
+                <option value="Sunscreen">Sunscreen</option>
+                <option value="Make Up">Make Up</option>
+                <option value="Skin Protector">Skin Protector</option>
+                <option value="Lipstick">Lipstick</option>
+                <option value="Natural Cream">Natural Cream</option>
               </select>
             </div>
           </div>
@@ -66,7 +77,7 @@ const AddProduct = () => {
             <input
               type="number"
               name="price"
-              placeholder="Price"
+              placeholder="Price $"
               className="input input-bordered w-full max-w-xs"
             />
           </div>

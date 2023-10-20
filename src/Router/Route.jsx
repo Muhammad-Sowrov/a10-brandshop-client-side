@@ -6,6 +6,7 @@ import BookedCart from "../Pages/BookedCart";
 import About from "../Pages/About";
 import Qna from "../Pages/Qna";
 import AddProduct from "../Pages/AddProduct";
+import Register from "../Pages/Register";
 
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login></Login>
+            },
+            {
+                path: "/register",
+                element: <Register></Register>
             },
             {
                 path: "/cart",
