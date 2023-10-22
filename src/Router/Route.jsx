@@ -11,6 +11,8 @@ import Error from "../Pages/Error";
 import PrivateRoute from "./PrivateRoute";
 import Dior from "../Pages/Brand/Dior/Dior";
 import Estee from "../Pages/Brand/Estee/Estee";
+import Lancome from "../Pages/Brand/Lancome/Lancome";
+import Revlon from "../Pages/Brand/Revlon/Revlon";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -58,6 +60,16 @@ const router = createBrowserRouter([
       {
         path: "/products/Estee Lauder",
         element: <Estee></Estee>,
+        loader: ()=> fetch("http://localhost:5000/products")
+      },
+      {
+        path: "/products/Revlon",
+        element: <Revlon></Revlon>,
+        loader: ()=> fetch("http://localhost:5000/products")
+      },
+      {
+        path: "/products/Lancome",
+        element: <Lancome></Lancome>,
         loader: ()=> fetch("http://localhost:5000/products")
       }
       // {

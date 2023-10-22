@@ -25,7 +25,7 @@ const DiorAll = ({ item }) => {
               Type: {type}
             </p>
             <p className="mt-5 text-black text-base font-bold">
-              Price: {price}
+              Price: {price} $
             </p>
             <p className="mt-5 flex items-center text-black text-lg font-bold">
               Rating<GrStar className="text-purple-500"/>: {rating}/5
