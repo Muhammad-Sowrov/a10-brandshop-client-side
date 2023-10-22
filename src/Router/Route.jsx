@@ -13,6 +13,8 @@ import Dior from "../Pages/Brand/Dior/Dior";
 import Estee from "../Pages/Brand/Estee/Estee";
 import Lancome from "../Pages/Brand/Lancome/Lancome";
 import Revlon from "../Pages/Brand/Revlon/Revlon";
+import Shiseido from "../Pages/Brand/Shiseido/Shiseido";
+import Olay from "../Pages/Brand/Olay/Olay";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -65,6 +67,16 @@ const router = createBrowserRouter([
       {
         path: "/products/Revlon",
         element: <Revlon></Revlon>,
+        loader: ()=> fetch("http://localhost:5000/products")
+      },
+      {
+        path: "/products/Shiseido",
+        element: <Shiseido></Shiseido>,
+        loader: ()=> fetch("http://localhost:5000/products")
+      },
+      {
+        path: "/products/Olay",
+        element: <Olay></Olay>,
         loader: ()=> fetch("http://localhost:5000/products")
       },
       {
