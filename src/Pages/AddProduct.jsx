@@ -9,7 +9,20 @@ const AddProduct = () => {
     const price = form.price.value;
     const description = form.description.value;
     const rating = form.rating.value;
-    console.log(image, name, brand_name, type, price, description, rating);
+    const newProducts = {image, name, brand_name, type, price, description, rating};
+    console.log(newProducts);
+    // connect mongo
+    fetch('http://localhost:5000/products', {
+      method: "POST",
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newProducts)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    })
   };
   return (
     <div className="">

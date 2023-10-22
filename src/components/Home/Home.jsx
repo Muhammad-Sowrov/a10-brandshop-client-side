@@ -5,7 +5,9 @@ import Brand from "../Brands/Brand";
 
 const Home = () => {
     const brands = useLoaderData([]);
-    console.log(brands);
+    // console.log(brands);
+
+    
     return (
         <div>
             <Header></Header>

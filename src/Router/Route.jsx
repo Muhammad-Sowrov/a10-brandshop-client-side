@@ -9,7 +9,8 @@ import AddProduct from "../Pages/AddProduct";
 import Register from "../Pages/Register";
 import Error from "../Pages/Error";
 import PrivateRoute from "./PrivateRoute";
-
+import Dior from "../Pages/Brand/Dior/Dior";
+import Estee from "../Pages/Brand/Estee/Estee";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -49,6 +50,21 @@ const router = createBrowserRouter([
         path: "/faq",
         element: <Qna></Qna>,
       },
+      {
+        path: "/products/dior",
+        element: <Dior></Dior>,
+        loader: ()=> fetch("http://localhost:5000/products")
+      },
+      {
+        path: "/products/Estee Lauder",
+        element: <Estee></Estee>,
+        loader: ()=> fetch("http://localhost:5000/products")
+      }
+      // {
+      //   path: "/products/:brand_name",
+      //   element: <Brand></Brand>,
+      //   loader: ()=> fetch('http://localhost:5000/products')
+      // },
     ],
   },
 ]);
