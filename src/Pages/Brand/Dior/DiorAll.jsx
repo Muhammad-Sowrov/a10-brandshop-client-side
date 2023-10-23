@@ -15,26 +15,26 @@ const DiorAll = ({ item }) => {
             />
           </figure>
           <div>
-            <p className="mt-5 text-black text-base font-bold">
-              Name: {name}
-            </p>
+            <p className="mt-5 text-black text-base font-bold">Name: {name}</p>
             <p className="mt-5 text-black text-base font-bold">
               Brand: {brand_name}
             </p>
-            <p className="mt-5 text-black text-base font-bold">
-              Type: {type}
-            </p>
+            <p className="mt-5 text-black text-base font-bold">Type: {type}</p>
             <p className="mt-5 text-black text-base font-bold">
               Price: {price} $
             </p>
             <p className="mt-5 flex items-center text-black text-lg font-bold">
-              Rating<GrStar className="text-purple-500"/>: {rating}/5
+              Rating
+              <GrStar className="text-purple-500" />: {rating}/5
             </p>
             <div className="flex mt-5 gap-2">
-              <button className="btn btn-outline btn-error btn-xs sm:btn-sm md:btn-sm lg:btn-md">Update</button>
-              <button className="btn btn-outline btn-success btn-xs sm:btn-sm md:btn-sm lg:btn-md">Details</button>
+              <button className="btn btn-outline btn-error btn-xs sm:btn-sm md:btn-sm lg:btn-md">
+                Update
+              </button>
+              <button className="btn btn-outline btn-success btn-xs sm:btn-sm md:btn-sm lg:btn-md">
+                Details
+              </button>
             </div>
-            
           </div>
         </div>
       </div>

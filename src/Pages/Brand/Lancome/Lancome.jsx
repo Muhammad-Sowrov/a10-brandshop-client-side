@@ -1,6 +1,7 @@
 // import React from 'react';
 import { useLoaderData } from "react-router-dom";
 import LancomeAll from "./LancomeAll";
+import Swipers from "../../Swipers";
 
 const Lancome = () => {
   const data = useLoaderData([]);
@@ -10,6 +11,7 @@ const Lancome = () => {
   });
   return (
     <div>
+      <Swipers></Swipers>
       <div className="grid grid-cols-1 md:grid-cols-2">
         {filerLancome.map((item) => (
           <LancomeAll key={item._id} item={item}></LancomeAll>

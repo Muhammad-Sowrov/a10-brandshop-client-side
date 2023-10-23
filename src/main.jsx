@@ -5,6 +5,7 @@ import { RouterProvider } from "react-router-dom";
 import router from "./Router/Route";
 import AuthProvider from "./firebase/AuthProvider";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
