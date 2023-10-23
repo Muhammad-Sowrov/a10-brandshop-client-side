@@ -84,11 +84,6 @@ const router = createBrowserRouter([
         element: <Lancome></Lancome>,
         loader: ()=> fetch("http://localhost:5000/products")
       }
-      // {
-      //   path: "/products/:brand_name",
-      //   element: <Brand></Brand>,
-      //   loader: ()=> fetch('http://localhost:5000/products')
-      // },
     ],
   },
 ]);
