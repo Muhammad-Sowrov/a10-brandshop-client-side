@@ -12,7 +12,7 @@ const AddProduct = () => {
     const newProducts = {image, name, brand_name, type, price, description, rating};
     console.log(newProducts);
     // connect mongo
-    fetch('http://localhost:5000/products', {
+    fetch('https://blushly-server-f746xt7d5-muhammad-sowrov.vercel.app/products', {
       method: "POST",
       headers: {
         'content-type': 'application/json'

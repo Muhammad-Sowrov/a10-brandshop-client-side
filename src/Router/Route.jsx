@@ -15,6 +15,7 @@ import Lancome from "../Pages/Brand/Lancome/Lancome";
 import Revlon from "../Pages/Brand/Revlon/Revlon";
 import Shiseido from "../Pages/Brand/Shiseido/Shiseido";
 import Olay from "../Pages/Brand/Olay/Olay";
+import One from "../Pages/Brand/Dior/Details/One";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -57,32 +58,36 @@ const router = createBrowserRouter([
       {
         path: "/products/dior",
         element: <Dior></Dior>,
-        loader: ()=> fetch("http://localhost:5000/products")
+        loader: ()=> fetch("https://blushly-server-f746xt7d5-muhammad-sowrov.vercel.app/products")
+      },
+      {
+        path: "/Dior/${_id}",
+        element: <One></One>
       },
       {
         path: "/products/Estee Lauder",
         element: <Estee></Estee>,
-        loader: ()=> fetch("http://localhost:5000/products")
+        loader: ()=> fetch("https://blushly-server-f746xt7d5-muhammad-sowrov.vercel.app/products")
       },
       {
         path: "/products/Revlon",
         element: <Revlon></Revlon>,
-        loader: ()=> fetch("http://localhost:5000/products")
+        loader: ()=> fetch("https://blushly-server-f746xt7d5-muhammad-sowrov.vercel.app/products")
       },
       {
         path: "/products/Shiseido",
         element: <Shiseido></Shiseido>,
-        loader: ()=> fetch("http://localhost:5000/products")
+        loader: ()=> fetch("https://blushly-server-f746xt7d5-muhammad-sowrov.vercel.app/products")
       },
       {
         path: "/products/Olay",
         element: <Olay></Olay>,
-        loader: ()=> fetch("http://localhost:5000/products")
+        loader: ()=> fetch("https://blushly-server-f746xt7d5-muhammad-sowrov.vercel.app/products")
       },
       {
         path: "/products/Lancome",
         element: <Lancome></Lancome>,
-        loader: ()=> fetch("http://localhost:5000/products")
+        loader: ()=> fetch("https://blushly-server-f746xt7d5-muhammad-sowrov.vercel.app/products")
       }
     ],
   },

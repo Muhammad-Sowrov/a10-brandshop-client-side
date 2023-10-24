@@ -44,7 +44,7 @@ export default Brand;
 
 //   const handleBrand = (brand_name) =>{
 //     console.log(brand_name);
-//     fetch(`http://localhost:5000/products/${brand_name}`)
+//     fetch(`https://blushly-server-f746xt7d5-muhammad-sowrov.vercel.app/products/${brand_name}`)
 //     .then(res => res.json())
 //     .then(data => {
 //       console.log(data);
