@@ -1,33 +1,13 @@
-const AddProduct = () => {
-  const handleAdd = e => {
-    e.preventDefault();
-    const form = e.target;
-    const image = form.img_url.value;
-    const name = form.name.value;
-    const brand_name = form.brand_name.value;
-    const type = form.type.value;
-    const price = form.price.value;
-    const description = form.description.value;
-    const rating = form.rating.value;
-    const newProducts = {image, name, brand_name, type, price, description, rating};
-    console.log(newProducts);
-    // connect mongo
-    fetch('https://blushly-server-fu3505r2e-muhammad-sowrov.vercel.app/products', {
-      method: "POST",
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify(newProducts)
-    })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-    })
-  };
-  return (
-    <div className="">
-      <div className="container mx-auto my-1 md:my-10 lg:my-20 w-full max-w-xl rounded-md bg-purple-200">
-        <form onSubmit={handleAdd} className="py-10">
+
+
+const Update = () => {
+    const handleUpdate = (e) => {
+
+    }
+    return (
+        <div>
+            <div className="container mx-auto my-1 md:my-10 lg:my-20 w-full max-w-xl rounded-md bg-purple-200">
+        <form onSubmit={handleUpdate} className="py-10">
           <div className="form-control w-full mx-auto max-w-xs">
             <label className="label">
               <span className="label-text">Image</span>
@@ -121,12 +101,12 @@ const AddProduct = () => {
             />
           </div>
           <div className="w-full mx-auto max-w-xs mt-2">
-            <button className="btn w-full">ADD</button>
+            <button className="btn w-full">Update</button>
           </div>
         </form>
       </div>
-    </div>
-  );
+        </div>
+    );
 };
 
-export default AddProduct;
+export default Update;

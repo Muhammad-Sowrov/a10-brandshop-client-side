@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 const DiorAll = ({ item }) => {
   const { _id, image, name, brand_name, type, price, rating, description } =
     item;
-  const handleDetails = (_id) => {
-    console.log(_id);
-  };
+
   return (
     <div className="h-[80v]">
       <div className="card border mx-5 py-5 my-2 md:my-5 bg-gray-100 rounded-md">
@@ -32,17 +30,15 @@ const DiorAll = ({ item }) => {
               <GrStar className="text-purple-500" />: {rating}/5
             </p>
             <div className="flex mt-5 gap-2">
-              <button className="btn btn-outline btn-error btn-xs sm:btn-sm md:btn-sm lg:btn-md">
-                Update
-              </button>
-              <Link to="/Dior/${_id}">
-                <button
-                  onClick={() => handleDetails(_id)}
-                  className="btn btn-outline btn-success btn-xs sm:btn-sm md:btn-sm lg:btn-md"
-                >
-                  Details
+              <Link to="/updateD">
+                <button className="btn btn-outline btn-error btn-xs sm:btn-sm md:btn-sm lg:btn-md">
+                  Update
                 </button>
               </Link>
+
+              <button className="btn btn-outline btn-success btn-xs sm:btn-sm md:btn-sm lg:btn-md">
+                Details
+              </button>
             </div>
           </div>
         </div>
