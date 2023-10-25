@@ -33,9 +33,11 @@ const EsteAll = ({ item }) => {
                   Update
                 </button>
               </Link>
-              <button className="btn btn-outline btn-success btn-xs sm:btn-sm md:btn-sm lg:btn-md">
-                Details
-              </button>
+              <Link to={`/detailsD/${_id}`}>
+                <button className="btn btn-outline btn-success btn-xs sm:btn-sm md:btn-sm lg:btn-md">
+                  Details
+                </button>
+              </Link>
             </div>
           </div>
         </div>

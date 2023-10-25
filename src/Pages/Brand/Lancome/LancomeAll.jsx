@@ -29,14 +29,16 @@ const LancomeAll = ({ item }) => {
               <GrStar className="text-purple-500" />: {rating}/5
             </p>
             <div className="flex mt-5 gap-2">
-            <Link to={`/updateL/${_id}`}>
+              <Link to={`/updateL/${_id}`}>
                 <button className="btn btn-outline btn-error btn-xs sm:btn-sm md:btn-sm lg:btn-md">
                   Update
                 </button>
               </Link>
-              <button className="btn btn-outline btn-success btn-xs sm:btn-sm md:btn-sm lg:btn-md">
-                Details
-              </button>
+              <Link to={`/detailsL/${_id}`}>
+                <button className="btn btn-outline btn-success btn-xs sm:btn-sm md:btn-sm lg:btn-md">
+                  Details
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -16,6 +16,7 @@ import Revlon from "../Pages/Brand/Revlon/Revlon";
 import Shiseido from "../Pages/Brand/Shiseido/Shiseido";
 import Olay from "../Pages/Brand/Olay/Olay";
 import UpdateD from "../Pages/Brand/Dior/Update/UpdateD";
+import Details from "../Pages/Brand/Dior/Details/Details";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -115,6 +116,36 @@ const router = createBrowserRouter([
         path: "/products/Lancome",
         element: <Lancome></Lancome>,
         loader: ()=> fetch(" https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products")
+      },
+      {
+        path: "/detailsD/:id",
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
+      },
+      {
+        path: "/detailsE/:id",
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
+      },
+      {
+        path: "/detailsR/:id",
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
+      },
+      {
+        path: "/detailsS/:id",
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
+      },
+      {
+        path: "/detailsO/:id",
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
+      },
+      {
+        path: "/detailsL/:id",
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
       }
     ],
   },
