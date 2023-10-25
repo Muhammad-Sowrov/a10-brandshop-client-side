@@ -26,7 +26,7 @@ const UpdateD = () => {
       rating,
     };
     console.log(UpdateProducts);
-    fetch(`http://localhost:5000/products/id/${_id}`, {
+    fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${_id}`, {
       method: "PUT",
       headers: {
         'content-type': 'application/json'

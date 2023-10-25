@@ -58,63 +58,63 @@ const router = createBrowserRouter([
       {
         path: "/products/dior",
         element: <Dior></Dior>,
-        loader: ()=> fetch("https://blushly-server-fu3505r2e-muhammad-sowrov.vercel.app/products")
+        loader: ()=> fetch(" https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products")
       },
       {
         path: "/updateD/:id",
         element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
       },
       {
         path: "/updateE/:id",
         element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
       },
       {
         path: "/updateR/:id",
         element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
       },
       {
         path: "/updateS/:id",
         element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
       },
       {
         path: "/updateO/:id",
         element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
       },
       {
         path: "/updateL/:id",
         element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
+        loader: ({params})=> fetch(` https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products/id/${params.id}`)
       },
     
       {
         path: "/products/Estee Lauder",
         element: <Estee></Estee>,
-        loader: ()=> fetch("https://blushly-server-fu3505r2e-muhammad-sowrov.vercel.app/products")
+        loader: ()=> fetch(" https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products")
       },
       {
         path: "/products/Revlon",
         element: <Revlon></Revlon>,
-        loader: ()=> fetch("https://blushly-server-fu3505r2e-muhammad-sowrov.vercel.app/products")
+        loader: ()=> fetch(" https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products")
       },
       {
         path: "/products/Shiseido",
         element: <Shiseido></Shiseido>,
-        loader: ()=> fetch("https://blushly-server-fu3505r2e-muhammad-sowrov.vercel.app/products")
+        loader: ()=> fetch(" https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products")
       },
       {
         path: "/products/Olay",
         element: <Olay></Olay>,
-        loader: ()=> fetch("https://blushly-server-fu3505r2e-muhammad-sowrov.vercel.app/products")
+        loader: ()=> fetch(" https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products")
       },
       {
         path: "/products/Lancome",
         element: <Lancome></Lancome>,
-        loader: ()=> fetch("https://blushly-server-fu3505r2e-muhammad-sowrov.vercel.app/products")
+        loader: ()=> fetch(" https://blushly-server-6wrqw3jbw-muhammad-sowrov.vercel.app/products")
       }
     ],
   },
