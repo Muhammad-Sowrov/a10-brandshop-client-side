@@ -28,7 +28,7 @@ const EsteAll = ({ item }) => {
               <GrStar className="text-purple-500" />: {rating}/5
             </p>
             <div className="flex mt-5 gap-2">
-              <Link to="/updateD">
+              <Link to={`/updateE/${_id}`}>
                 <button className="btn btn-outline btn-error btn-xs sm:btn-sm md:btn-sm lg:btn-md">
                   Update
                 </button>

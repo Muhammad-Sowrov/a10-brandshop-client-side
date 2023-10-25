@@ -15,8 +15,7 @@ import Lancome from "../Pages/Brand/Lancome/Lancome";
 import Revlon from "../Pages/Brand/Revlon/Revlon";
 import Shiseido from "../Pages/Brand/Shiseido/Shiseido";
 import Olay from "../Pages/Brand/Olay/Olay";
-import One from "../Pages/Brand/Dior/Details/One";
-import Update from "../Pages/Brand/Dior/Update/Update";
+import UpdateD from "../Pages/Brand/Dior/Update/UpdateD";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -62,14 +61,36 @@ const router = createBrowserRouter([
         loader: ()=> fetch("https://blushly-server-fu3505r2e-muhammad-sowrov.vercel.app/products")
       },
       {
-        path: "/updateD",
-        element:<PrivateRoute><Update></Update></PrivateRoute>
+        path: "/updateD/:id",
+        element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
       },
       {
-        path: "/Dior/${_id}",
-        element: <One></One>,
-        loader: (params)=> fetch('https://blushly-server-fu3505r2e-muhammad-sowrov.vercel.app/products')
+        path: "/updateE/:id",
+        element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
       },
+      {
+        path: "/updateR/:id",
+        element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
+      },
+      {
+        path: "/updateS/:id",
+        element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
+      },
+      {
+        path: "/updateO/:id",
+        element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
+      },
+      {
+        path: "/updateL/:id",
+        element: <PrivateRoute><UpdateD></UpdateD></PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/products/id/${params.id}`)
+      },
+    
       {
         path: "/products/Estee Lauder",
         element: <Estee></Estee>,
